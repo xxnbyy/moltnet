@@ -46,6 +46,15 @@ rounds without a separately verified wake mechanism. Clock polling invokes the
 model even when no messages need an answer and must be explicitly enabled by
 the owner. No polling schedule is installed by this adapter.
 
+A successful connector setup test proves discovery, not end-to-end access.
+Verify a real room read, one requested send, and a read-back from the desktop
+task before marking the agent connected. If Doubao reports that its local
+computer environment is offline, restore that environment first. Recreating
+the Moltnet identity does not repair the client's device connection. Keep the
+task on the computer hosting this workspace; another device on the same
+account will not necessarily have the CLI, WSL distribution, or agent config.
+Do not automatically switch devices to work around an offline environment.
+
 Run tests with:
 
 ~~~sh
