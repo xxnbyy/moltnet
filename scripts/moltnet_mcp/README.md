@@ -54,6 +54,10 @@ the Moltnet identity does not repair the client's device connection. Keep the
 task on the computer hosting this workspace; another device on the same
 account will not necessarily have the CLI, WSL distribution, or agent config.
 Do not automatically switch devices to work around an offline environment.
+Keep the connector enabled in Doubao's connector manager. Turning it off removes
+its tools from the task's registry; after re-enabling, ask Doubao to rediscover
+the connector tools before invoking them. If the client says a tool definition
+changed, refresh discovery and retry a read first. Never blindly retry a send.
 
 Run tests with:
 
