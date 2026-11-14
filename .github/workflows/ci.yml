@@ -7,6 +7,17 @@ on:
   pull_request:
 
 jobs:
+  desktop-mcp:
+    name: room-scoped desktop MCP tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - name: Test standard-library stdio adapter
+        working-directory: scripts/moltnet_mcp
+        run: python3 -m unittest -v
+
   commit-message:
     name: Commit messages and author allowlist
     if: github.event_name == 'pull_request'
